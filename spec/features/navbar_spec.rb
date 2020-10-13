@@ -15,7 +15,7 @@ RSpec.describe "Navbar", type: :feature do
   context('not logged in') do
     it('should have a log in button') do
       expect(@nav).to have_button('Brewery Login')
-      expect(@nam).to have_button('Brewery Sign Up')
+      expect(@nav).to have_button('Brewery Sign Up')
       expect(@nav).not_to have_button('Logout')
     end
   end

@@ -6,9 +6,10 @@ class DeviseCreateBreweries < ActiveRecord::Migration[6.0]
       ## Database authenticatable
       t.string :email,              null: false, default: ""
       t.string :encrypted_password, null: false, default: ""
-      t.string :street_address
-      t.string :state, null: false, default: 'NA'
-      t.integer :zip_code
+      t.string :street_address, null: false
+      t.string :city, null: false
+      t.string :state, null: false
+      t.integer :zip_code, null: false
       t.string :country, null: false, default: 'USA'
 
 

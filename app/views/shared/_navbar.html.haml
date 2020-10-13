@@ -4,8 +4,8 @@
   #right
   = link_to '#' do
     = content_tag('button', 'Brewery Login', class: '') 
-  = link_to '#' do
-    = content_tag('button', 'Brewery Sign Up', class: '') 
+  = link_to new_brewery_registration_path do
+    = content_tag('button', 'Brewery Sign Up', id: 'sign-up') 
       
     
       

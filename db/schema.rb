@@ -18,9 +18,10 @@ ActiveRecord::Schema.define(version: 2020_10_13_211528) do
   create_table "breweries", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
-    t.string "street_address"
-    t.string "state", default: "NA", null: false
-    t.integer "zip_code"
+    t.string "street_address", null: false
+    t.string "city", null: false
+    t.string "state", null: false
+    t.integer "zip_code", null: false
     t.string "country", default: "USA", null: false
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
