@@ -32,8 +32,9 @@ RSpec.describe 'Brewery Sign Up', type: :feature do
       fill_in 'Password confirmation', with: @brewery[:password]
 
       click_on 'Sign up'
+
       expect(current_path).to eq('/')
-      expect(page).to have_content("Welcome! You have signed up successfully")
+      expect(page).to have_content('Welcome! You have signed up successfully')
     end
   end
 end

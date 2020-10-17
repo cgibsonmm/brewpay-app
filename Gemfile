@@ -36,11 +36,13 @@ group :development, :test do
   gem 'rspec-rails', '~> 4.0.1'
   gem 'selenium-webdriver'
   gem 'faker'
+  gem 'factory_bot_rails'
 end
 
 group :test do
   gem 'capybara'
   gem 'launchy'
+  gem 'database_cleaner-active_record'
 end
 
 group :development do
