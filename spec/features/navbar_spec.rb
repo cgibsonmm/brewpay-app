@@ -8,7 +8,6 @@ RSpec.describe "Navbar", type: :feature do
   end
 
   it('should render') do
-   
    expect(@nav).to have_content("BrewPay")
   end
 
