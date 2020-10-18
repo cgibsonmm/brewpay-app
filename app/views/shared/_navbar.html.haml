@@ -1,11 +1,14 @@
-#navbar
+#navbar.mx-2
   .container.h-20.flex.space-between.mx-auto.items-center.justify-between.text-gray-900
     = link_to "BrewPay", root_path, class: 'text-3xl font-bold text-green-500'
-    #right.text-xl
+    #mobile.md:hidden
+      = fa_icon 'bars'
+      %ul#dropdown
+        %li hello
+    #right.text-xl.text-gray-100.hidden.md:flex
       = link_to brewery_session_path do
         = content_tag('button', 'Brewery Login', class: 'ml-2 bg-green-200 px-2 py-1 rounded text-gray-900 shadow hover:bg-green-300 focus:outline-black')
       = link_to new_brewery_registration_path do
         = content_tag('button', 'Brewery Sign Up', id: 'sign-up', class: 'ml-2 bg-green-200 px-2 py-1 rounded text-gray-900 shadow, hover:bg-green-300 focus:outline-black')
-
 
 = javascript_pack_tag 'navbar'
