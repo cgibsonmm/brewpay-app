@@ -1,0 +1,7 @@
+= simple_form_for([:brewery, @brew]) do |f|
+  = f.input 'title'
+  = f.input 'description'
+  = f.input 'price'
+  = f.input 'ABV', label: "ABV"
+  = f.file_field 'logo'
+  = f.submit
