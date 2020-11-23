@@ -20,7 +20,12 @@ RSpec.describe "Navbar", type: :feature do
   end
 
   context('logged in') do
-    xit('should have a logout button') do 
+    before do
+      @brewery = create(:brewery)
+      login_as(@brewery)
+    end
+    it('should have a logout button') do 
+      visit '/'
       expect(@nav).not_to have_button('Brewery Login')
       expect(@nav).to have_button('Logout')
     end
