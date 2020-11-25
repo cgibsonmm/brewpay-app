@@ -9,10 +9,10 @@ RSpec.describe 'Create Brew', type: :feature do
     end
 
     it 'Should create a valid brew' do
-      @brew = { title: Faker::Beer.name }
+      @brew = { title: Faker::Beer.name, description: Faker::Lorem.sentence(word_count: 6) }
       visit new_brewery_brew_path(@brewery)
       fill_in 'Title', with: @brew[:title]
-      fill_in 'Description', with: 'Loreum'
+      fill_in 'Description', with: @brew[:description]
       fill_in 'Price', with: '8.00'
       fill_in 'ABV', with: '2.0'
       attach_file('brew_logo', 'spec/files/brew-img.jpg')
