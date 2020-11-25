@@ -3,3 +3,5 @@ All Brews
 - @brews.each do |brew|
   %h4
     = brew.title
+  - if brew.logo.attached?
+    = image_tag brew.logo, alt: "#{brew.title}-logo"
