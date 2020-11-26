@@ -4,3 +4,9 @@
 - if alert
   %p.alert
     = alert
+- if flash[:success]
+  %p.notice
+    = flash[:success]
+- if flash[:error]
+  %p.notice
+    = flash[:error]
