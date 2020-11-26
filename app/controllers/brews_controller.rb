@@ -17,7 +17,7 @@ class BrewsController < ApplicationController
       redirect_to brewery_brews_path(current_brewery)
       flash[:success] = 'Successfully created brew'
     else
-      render new
+      render 'new'
       flash[:error] = 'Error creating brew'
     end
   end

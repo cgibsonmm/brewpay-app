@@ -1,7 +1,19 @@
-= simple_form_for([:brewery, @brew]) do |f|
-  = f.input 'title'
-  = f.input 'description'
-  = f.input 'price'
-  = f.input 'ABV', label: "ABV"
-  = f.file_field 'logo'
-  = f.submit
+%div.flex
+  = simple_form_for([:brewery, @brew],defaults: {wrapper_html: {class: 'flex flex-col mt-2'}}, hint_html: {class: ''})  do |f|
+    = f.input 'title'
+    = f.input 'description'
+    = f.input 'price'
+    = f.input 'ABV', label: "ABV"
+    .control-group
+      .attach-set
+        = f.input :logo, input_html: {hidden: true}, label: 'Upload Attachment'
+        .input-append
+          %input#file-display.border-gray-900.border-1.bg-gray-100.p-1{placeholder: 'jpg, png'}
+          %a#upload-btn.bg-green-200.p-2
+            Browse
+    = f.button :submit, class: 'flex bg-green-300 my-3 p-4 rounded'
+
+    %img#preview
+
+
+= javascript_pack_tag 'brew/fileUpload'
