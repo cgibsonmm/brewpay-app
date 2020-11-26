@@ -15,7 +15,7 @@ RSpec.describe 'Create Brew', type: :feature do
       fill_in 'Description', with: @brew[:description]
       fill_in 'Price', with: '8.00'
       fill_in 'ABV', with: '2.0'
-      attach_file('brew_logo', 'spec/files/brew-img.jpg')
+      attach_file('brew[logo]', 'spec/files/brew-img.jpg', visible: false)
 
       click_on 'Create Brew'
 
